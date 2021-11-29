@@ -5,4 +5,5 @@ z poziomu terminala:
 2. Należy wejść w przeglądarce na adres https://localhost:7193 albo http://localhost:5154
 
 z poziomu Visial Studio
-Otwieramy projekt i w menu górnym klikamu uruchom (screena nie mam gdzie to :P)
+1. Otwieramy projekt
+2. W menu górnym klikamu uruchom (screena nie mam gdzie to :P)
