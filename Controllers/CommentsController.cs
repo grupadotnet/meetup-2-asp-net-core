@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using meetup_2_asp_net_core.Interfaces;
+using meetup_2_asp_net_core.Models;
 
 namespace meetup_2_asp_net_core.Controllers
 {
@@ -26,6 +27,20 @@ namespace meetup_2_asp_net_core.Controllers
                 response = "Ok",
                 firstName = name,
                 age
+            });
+        }
+
+        [HttpPost]
+        public IActionResult Send([FromForm] NewCommentRequest request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            _commentsService.CreateComment(request.Message);
+
+            return StatusCode(201, new {
+                Created = true,
+                Comment = request.Message,
             });
         }
 

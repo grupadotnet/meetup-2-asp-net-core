@@ -18,3 +18,11 @@
         @comment.Message
     </div>
 }
+
+<form method="post" asp-controller="Comments" asp-action="Send" style="margin-top: 100px;">
+    <label>
+        Dodaj komentarz <br/>
+        <input name="Message" maxlength="10" placeholder="Treść komentarza" required />
+    </label>
+    <input type="submit" value="Dodaj" />
+</form>
