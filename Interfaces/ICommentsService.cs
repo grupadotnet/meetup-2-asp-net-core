@@ -2,7 +2,7 @@ using meetup_2_asp_net_core.Models;
 
 namespace meetup_2_asp_net_core.Interfaces
 {
-    interface ICommentsService
+    public interface ICommentsService
     {
         Comment[] GetAllComments();
 
