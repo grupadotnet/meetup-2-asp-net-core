@@ -4,7 +4,7 @@ namespace meetup_2_asp_net_core.Interfaces
 {
     public interface ICommentsService
     {
-        Comment[] GetAllComments();
+        List<Comment> GetAllComments();
 
         void CreateComment(string message);
     }
