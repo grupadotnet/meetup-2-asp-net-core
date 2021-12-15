@@ -1,7 +1,11 @@
+using meetup_2_asp_net_core.Interfaces;
+using meetup_2_asp_net_core.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ICommentsService, CommentsService>();
 
 var app = builder.Build();
 
